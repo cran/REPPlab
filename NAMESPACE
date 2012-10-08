@@ -1,0 +1,16 @@
+import(rJava,lattice,stats)
+
+S3method(coef,epplab)
+S3method(fitted,epplab)
+S3method(pairs,epplab)
+S3method(plot,epplab)
+S3method(predict,epplab)
+S3method(print,epplab)
+S3method(screeplot,epplab)
+S3method(summary,epplab)
+
+S3method(plot,epplabOutlier)
+S3method(print,epplabOutlier)
+S3method(summary,epplabOutlier)
+
+export(EPPlab, WhitenSVD, EPPlabOutlier)

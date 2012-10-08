@@ -1,0 +1,59 @@
+\name{plot.epplab}
+\docType{methods}
+\alias{plot.epplab}
+\alias{plot-method}
+\alias{plot,epplab-method}
+
+\title{Plot for an epplab Object}
+\description{
+ The function offers three informative plots for an epplab object.
+}
+\usage{
+ \method{plot}{epplab}(x,type="kernel", angles="radiants",kernel="biweight",which=1:10,
+                       as.table=TRUE,...)
+}
+
+\arguments{
+  \item{x}{Object of class \code{epplab}.}
+  \item{type}{Type of plot, values are "kernel", "histogram" and "angles".}
+  \item{angles}{Values are "degree" and "radiants", if \code{type="angles"}.}
+  \item{kernel}{Type of kernel, passed on to \code{\link{density}}.}
+  \item{which}{Which simulation runs should be taken into account.}
+  \item{as.table}{A logical flag that controls the order in which panels should be displayed.}
+  \item{...}{Graphical parameters, see also \code{\link[lattice]{xyplot}}, \code{\link[lattice]{densityplot}} and \code{\link[lattice]{histogram}}.}
+}
+
+\details{
+ The option \code{which} can restrict the output to certain simulation runs. In case of many simulations,
+ this might improve the readability. 
+
+ For \code{type="kernel"}, the default, it plots a kernel density estimate for each of the chosen directions. In the case of \code{type="histogram"} the corresponding histograms.
+ For \code{type="angles"} it plots the angles of the first chosen direction against all others. Whether the angles are given in degrees or radiants, depends on the value of \code{angles}.
+}
+
+\seealso{
+\code{\link[lattice]{xyplot}}, \code{\link[lattice]{densityplot}}, \code{\link[lattice]{histogram}}, \code{\link{density}}
+}
+
+\examples{
+library(tourr)
+data(olive)
+res <- EPPlab(olive[,3:10],PPalg="PSO",PPindex="KurtosisMin",n.simu=10, maxiter=20)
+
+# Plot with kernel estimator
+plot(res)
+
+# Just the best 5 and then 8
+plot(res,which=c(1:5,8))
+
+# Plot as histogram
+plot(res,type="histogram")
+
+# Plot an angles plot
+plot(res,type="angles")
+}
+
+\author{Daniel Fischer, Klaus Nordhausen}
+
+\keyword{methods}
+\keyword{hplot}

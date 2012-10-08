@@ -1,0 +1,48 @@
+\name{screeplot.epplab}
+\docType{methods}
+\alias{screeplot.epplab}
+\alias{screeplot-method}
+\alias{screeplot,epplab-method}
+
+\title{Creating a Screeplot for an epplab Object}
+\description{
+  Plots the objective criteria of an \code{epplab} object versus the simulation runs.
+}
+\usage{
+ \method{screeplot}{epplab}(x,type="lines",which=1:10,main="",ylab="Objective criterion",
+                            xlab="Simulation run",...)
+}
+
+\arguments{
+  \item{x}{Object of class \code{epplab}.}
+  \item{type}{Type of screeplot, values are "barplot" and "lines"}
+  \item{which}{Which simulation runs should be taken into account}
+  \item{main}{Main title of the plot}
+  \item{ylab}{Y-axis label}
+  \item{xlab}{X-axis label}
+  \item{...}{Graphical parameters, see also par()}
+}
+
+\details{
+ The option \code{which} can restrict the output to certain simulation runs. In case of many simulations,
+ this might improve the readability. 
+ The \code{barplot} option is often not meaningful, because the objective criteria are usually large and bars begin by default at zero. 
+}
+
+\examples{
+library(tourr)
+data(olive)
+res <- EPPlab(olive[,3:10],PPalg="PSO",PPindex="KurtosisMin",n.simu=10, maxiter=20)
+screeplot(res)
+
+# Pretty useless:
+screeplot(res,type="barplot")
+
+screeplot(res,which=1:5)
+}
+
+
+\author{Daniel Fischer}
+
+\keyword{hplot}
+

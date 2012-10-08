@@ -1,0 +1,53 @@
+\name{predict.epplab}
+\docType{methods}
+\alias{predict.epplab}
+\alias{predict-method}
+\alias{predict,epplab-method}
+
+\title{Calculates projections for a new Data Object}
+\description{
+  Calculates the projections of a new data object onto the directions from an existing ebblab object. 
+}
+\usage{
+ \method{predict}{epplab}(object,which=1, data=NULL,...)
+}
+
+\arguments{
+  \item{object}{Object of class \code{epplab}.}
+  \item{which}{Onto which direction should the new data be projected.}
+  \item{data}{The new data object}
+  \item{...}{Additional parameters}
+}
+
+\value{
+A matrix having in each column the projection onto the direction of a certain run and in each row the projected value.
+}
+
+\details{
+The default projection direction is the direction with the best objective criterion. In case that no data
+is given to the function, the fitted scores for the original data will be returned. 
+}
+
+\examples{
+library(tourr)
+data(olive)
+res <- EPPlab(olive[,3:10], PPalg="PSO", PPindex="KurtosisMin", n.simu=10, maxiter=20)
+
+newData <- matrix(rnorm(80), ncol=8)
+
+# Projection on the best direction
+predict(res, data=newData)
+
+# Projection on the best 3 directions
+predict(res, which=1:3, data=newData)
+
+# Similar with function fitted() when no data is given:
+predict(res)
+fitted(res)
+}
+
+
+\author{Daniel Fischer}
+
+\keyword{methods}
+\keyword{print}
