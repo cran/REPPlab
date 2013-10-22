@@ -3,7 +3,7 @@
 \docType{package}
 
 \title{
-  R Interface to the Java Programm EPP-lab v0.1.
+  R Interface to the Java Programm EPP-lab v0.2.
 }
 
 \description{
@@ -19,8 +19,8 @@
   \tabular{ll}{
     Package: \tab REPPlab\cr
     Type: \tab Package\cr
-    Version: \tab 0.1\cr
-    Date: \tab 2012-10-08\cr
+    Version: \tab 0.2\cr
+    Date: \tab 2013-10-22\cr
     License: \tab GPL\cr
     LazyLoad: \tab yes\cr
   }

@@ -19,7 +19,7 @@
   associated projection direction.
   }
 \usage{
-  EPPlab(x, PPindex="kurtosisMax", PPalg="GA", n.simu=20, sphere=FALSE,
+  EPPlab(x, PPindex="KurtosisMax", PPalg="GA", n.simu=20, sphere=FALSE,
          maxiter=NULL,individuals=NULL,particles=NULL)
 }
 

@@ -1,3 +1,6 @@
+# Changes:
+# 2013-02-17: Added the seed parts into the subfunction pp
+
 #-----------------------------------------------------------------------------------------------
 # Begin Javastuff preparations
 
@@ -17,6 +20,9 @@ eppSession<-function(){
 # Internal function that calls the Java Functions
 
  pp <- function(data,index,alg,nSimulations,sphere,iterations=NULL,individuals=NULL,particles=NULL){
+ 
+  seed <- runif(1)*10^7
+
   indexInt <- 0
 
   rows <- nrow(data)
@@ -24,7 +30,8 @@ eppSession<-function(){
 
   index<-match.arg(index,c("KurtosisMax","Friedman","Discriminant","FriedmanTukey","KurtosisMin","Indice4","StahelDonoho"))
   alg<-match.arg(alg,c("GA","PSO","Tribe"))
-    
+   
+  # Possible options for alg are "GA","Tribes" and "PSO" 
   if(alg=="GA")
   {
     ifelse(is.null(iterations),iterations <- 50, iterations <- iterations)
@@ -34,18 +41,16 @@ eppSession<-function(){
     ifelse(is.null(particles),tPara <- 50, tPara <- particles)
   } else if(alg=="Tribe"){
     ifelse(is.null(iterations),iterations <- 20, iterations <- iterations)
+    ifelse(is.null(particles),tPara <- 50, tPara <- particles)
   } else {
     stop("Unknown algorithm!\n")
   }
 
-
-  # Possible options for alg are "GA","Tribes" and "PSO"
-
   # Possible Indices as named in the Java code. For easing reasons we switch them to numerical values.
-  if(index=="KurtosisMax"){
+   if(index=="KurtosisMax"){
     indexInt <- 1
- # } else if(index=="Friedman"){
- #   indexInt <- 2
+  } else if(index=="Friedman"){
+    indexInt <- 2
   } else if(index=="Discriminant"){
     indexInt <- 3
   } else if(index=="FriedmanTukey"){
@@ -57,10 +62,10 @@ eppSession<-function(){
  # } else if(index=="StahelDonoho"){
  #   indexInt <- 7
   } else {
-    stop("Unknown index!\n")
+    stop("Unknown (or currently disabled) index!\n")
   }
 
- eppLabString <- .jcall("epp/EPPLab",returnSig="S",method="eppLabRInterface",indexInt,nSimulations,alg,iterations,tPara,as.double(rows),as.double(cols),as.double(as.vector(t(data))))
+ eppLabString <- .jcall("epp/EPPLab",returnSig="S",method="eppLabRInterface",indexInt,nSimulations,alg,iterations,tPara,as.double(rows),as.double(cols),as.double(as.vector(t(data))),as.double(seed))
 
  eppLabString
 
@@ -93,7 +98,7 @@ EpplabOutputConv <- function(x)
     }
 
 
-EPPlab <- function(x, PPindex="kurtosisMax", PPalg="GA", n.simu=20, sphere=FALSE, maxiter=NULL,individuals=NULL,particles=NULL)
+EPPlab <- function(x, PPindex="KurtosisMax", PPalg="GA", n.simu=20, sphere=FALSE, maxiter=NULL,individuals=NULL,particles=NULL)
         {
 	# center first the data:
 	MEANS <- colMeans(x)

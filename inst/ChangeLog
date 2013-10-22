@@ -1,4 +1,23 @@
 LOG of the CHANGES in the package REPPlab
 
+Version 0.2:
+-----------------------------------
+* EPPlab changes: 
+* Created the class "PseudoRandomNumbers" (in package javalain.math) in which there are two static methods
+   - public static void createGenerator (long seed) - to create a random generator of numbers.
+   - public static void destroyGenerator (long seed) - to destroy a random generator of numbers.
+   - public static double random () - to generate a number between [0 1[
+
+* Replaced all items "Math.random()" in project with "PseudoRandomNumbers.random()"
+* Create a random number generator during the first function call
+* Destroy the RNG when leaving the java program
+* Friedman subfunction does not work, so they are commented out
+
+* REPPlab changes:
+* EPPlab is now included as one jar file, instead of three subfiles
+* A random number will be passed to EPPlab as a seed (so, EPPlab results are 'seedable' from within R)
+* The typo in the default settings for the option PPindex in the EPPlab function has been fixed
+
 Version 0.1:
+------------------------------------
 * First build and CRAN submission

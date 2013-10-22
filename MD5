@@ -1,6 +1,6 @@
-e1550b3dd2117effd7f4351ff7ce37ed *DESCRIPTION
+3f6428e5873e06e1c6a157acd1337d65 *DESCRIPTION
 a23701eff467ce36c21fadaa6853ed1c *NAMESPACE
-7926704b35f427895e5648fbae482678 *R/REPPlab.R
+7003976ab1c39b3b0de3dd4f628772f6 *R/REPPlab.R
 d83f54585d531a2b44d07cc0ffaf1b76 *R/anglesXYPlot.R
 822b5fbbb0237bd064ce25020e72d9f6 *R/coef.epplab.R
 26f9d1d096192de6a6411df35c3defa2 *R/fitted.epplab.R
@@ -15,14 +15,11 @@ b22409d7ae0996462eff40ca1431f414 *R/print.epplab.R
 e4097a9c1e6ecb4f985519f423a32b9d *R/summary.epplab.R
 a5ce723b1fae72bdd6db4ec4b6a69b1a *R/summary.epplabOutlier.R
 fad9dbe1f705d070d0da68c182b8f7f9 *R/whitenSVD.R
-54c3b8ba10de3b6f911de663e8dbe968 *REPPlab-Ex.R
-17a696dbafb8474ded409f5d415fff7d *inst/ChangeLog
-f833e8e837b2dc118f30fa4a6b5276cd *inst/java/epplab.jar
-013d1672d909a44ad432e2d54819bab4 *inst/java/ooga.jar
-07bea09b76659bf54d0fe1fa5675df68 *inst/java/utilitaire.jar
-31d6cac235a6e6b549992f23b87227c4 *man/EPPlab.Rd
+2831bdb4d819d132485f50b4b3eb9b8a *inst/ChangeLog
+95c8a93c468dbf969b12ab04bcf398f4 *inst/java/REPPlab.jar
+a606c9cc62099372b72bdd7b8a61ebbb *man/EPPlab.Rd
 c9ba125d2ebe69853d08e72ffaa25f8b *man/EPPlabOutlier.Rd
-74c11e6ab0ea2c17926908843480f18b *man/REPPlab-package.Rd
+0404554942a0c147c3554c4df3fbb3ac *man/REPPlab-package.Rd
 6de265f37b54958c64a9416545c68dce *man/WhitenSVD.Rd
 218d95ae455a4f09a9771d4a6bac9f9f *man/coef.epplab.Rd
 69fb6f9e07b56db27bdca4f741617ad1 *man/fitted.epplab.Rd
