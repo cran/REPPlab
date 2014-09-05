@@ -1,0 +1,7 @@
+The EPPlab sources can be found under:
+  
+  https://github.com/fischuu/EPP-lab
+
+The here used release version has the DOI
+
+  http://dx.doi.org/10.5281/zenodo.11609

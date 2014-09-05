@@ -26,7 +26,7 @@ larger than the largest singular value times \code{tol}. If \code{tol=NULL} the 
 The output contains among others as attributes the singular values and the matrix needed to backtransform the whitened data to its original space. 
 }
 \value{
-The whitenend data.
+The whitened data.
 }
 
 \author{

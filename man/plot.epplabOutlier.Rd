@@ -5,7 +5,7 @@
 
 \title{Plot for an epplabOutlier Object}
 \description{
- Visualizes which observations are considered how often as outliers for an \code{epplabOutlier} object.
+ Visualizes which observations are considered as outliers and how often for an \code{epplabOutlier} object.
 }
 \usage{
  \method{plot}{epplabOutlier}(x, col=c("white","black"), outlier=TRUE, ...)

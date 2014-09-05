@@ -6,5 +6,6 @@ summary.epplab <- function(object, which=1:10, ...){
   cat("Index values     :",object$PPindexVal[which],"\n")
   cat("Algorithm used   :",object$PPalg,"\n")
   cat("Sphered          :",object$sphered,"\n")
+  cat("Iterations       :",object$PPiter[which],"\n")
   invisible(object)
 } 

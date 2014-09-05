@@ -2,25 +2,26 @@
 \alias{EPPlab}
 
 \title{
-  Function for Explanatory Projection Pursuit.
+  Function for Exploratory Projection Pursuit.
 }
 
 \description{
-  REPPlab optimizes a projection pursuit (PP) index using a Genetic Algorithm (GA) or two Particle Swarm
+  REPPlab optimizes a projection pursuit (PP) index using a Genetic Algorithm (GA) or one of two Particle Swarm
   Optimisation (PSO) algorithms over several runs, implemented in the Java program
   EPP-lab.
   One of the PSO algorithms is a classic one while the other one is
   a parameter-free extension called Tribes. The parameters of the algorithms (maxiter and individuals for GA and maxiter and particles for PSO) can
   be modified by the user.
-  The PP indices are the well-known Friedman (accessible via R in a later package version, so far only available via the Java program) and Friedman-Tukey
+  The PP indices are the well-known Friedman and Friedman-Tukey
   indices together with the kurtosis and a so-called discriminant index that is
   devoted to the detection of groups.
   At each run, the function finds a local optimum of the PP index and gives the
-  associated projection direction.
+  associated projection direction and criterion value.
   }
 \usage{
   EPPlab(x, PPindex="KurtosisMax", PPalg="GA", n.simu=20, sphere=FALSE,
-         maxiter=NULL,individuals=NULL,particles=NULL)
+         maxiter=NULL, individuals=NULL, particles=NULL, step_iter=10,
+         eps=10^(-6))
 }
 
 \arguments{
@@ -28,24 +29,26 @@
   \item{PPindex}{The used index, see details.}
   \item{PPalg}{The used algorithm, see details.}
   \item{n.simu}{Number of simulation runs.}
-  \item{sphere}{Logical, sphere the data. Default is \code{FALSE}.}
+  \item{sphere}{Logical, sphere the data. Default is \code{FALSE}, in which case the data is only  standardized.}
   \item{maxiter}{Maximum number of iterations.}
   \item{individuals}{Size of the generated population in GA.}
   \item{particles}{Number of generated particles in the standard PSO algorithm.}
+  \item{step_iter}{Convergence criterium parameter, see details. (Default: 10)}
+  \item{eps}{Convergence criterium parameter, see details. (Default: 10^(-6))}
 }
 
 \details{
-  The function always centers the data using \code{\link{colMeans}} and sphering the data is optional. If sphering is requested
-  the function \code{\link{WhitenSVD}} is used, which automatically tries to estimate the rank of the data. 
+  The function always centers the data using \code{\link{colMeans}} and divides by the standard deviation. Sphering the data is optional. If sphering is requested
+  the function \code{\link{WhitenSVD}} is used, which automatically tries to determine the rank of the data. 
 
   Currently the function provides the following projection pursuit indices: 
-  \code{KurtosisMax}, \code{Discriminant}, \code{FriedmanTukey}, \code{KurtosisMin}.
+  \code{KurtosisMax}, \code{Discriminant}, \code{Friedman}, \code{FriedmanTukey}, \code{KurtosisMin}.
 
-  The algorithms can be used to find the projection directions. These are a Genetic Algorithm \code{GA} and two Particle Swarm Optimisation algorithms \code{PSO} and \code{Tribe}.
+  Three algorithms can be used to find the projection directions. These are a Genetic Algorithm \code{GA} and two Particle Swarm Optimisation algorithms \code{PSO} and \code{Tribe}.
 
   Since the algorithms might find local optima they are run several times. The function sorts the found directions according to the optimization criterion. 
 
-  The different algorithm have different default settings. It is for GA: maxiter=50 and individuals=20. For PSO: maxiter=20 and particles=50. For Tribe: maxiter=20.
+  The different algorithms have different default settings. It is for GA: \code{maxiter=50} and \code{individuals=20}. For PSO: \code{maxiter=20} and \code{particles=50}. For Tribe: \code{maxiter=20}.
 
   For GA, the size of the generated population is fixed by the user (individuals). The algorithm is based on a tournament section of three participants. 
   It uses a 2-point crossover with a probability of 0.65 and the mutation operator is applied to all the individuals with a probability of 0.05. The termination criterion corresponds
@@ -55,25 +58,40 @@
   "cosine" neighborhood adapted to PP for the PSO algorithm. For Tribes, only the maximum number of iterations needs to be fixed. The algorithm proposed by Cooren and Clerc (2009)
   and adapted to PP using a "cosine neighborhood" is used.
 
+  The algorithms stop as soon as one of the two following conditions holds: the maximum number of iterations is reached or the relative difference between the index value of 
+  the present iteration i and the value of iteration i-\code{step_iter} is less than \code{eps}. In the last situation, the algorithm is said to converge and 
+  \code{EPPlab} will return the number of iterations needed to attain convergence.  If the convergence is not reached but the maximum number of iterations is attained, 
+  the function will return some warnings. The default values are 10 for \code{step_iter} and \code{1E-06} for \code{eps}. Note that if few runs have not converged 
+  this might not be problem and even non-converged projections might reveal some structure.
+
 }
 \value{
   A list with class 'epplab' containing the following components:
   \item{PPdir}{Matrix containing the PP directions as columns, see details.}
   \item{PPindexVal}{Vector containing the objective criterion value of each run.}
   \item{PPindex}{Name of the used projection index.}
+  \item{PPiter}{Vector containing the number of iterations of each run.}
+  \item{PPconv}{Boolean vector. Is TRUE if the run converged and FALSE else.}
   \item{PPalg}{Name of the used algorithm.}
+  \item{maxiter}{Maximum number of iterations, as given in function call.}
   \item{x}{Matrix containing the data (centered!).}
   \item{sphere}{Logical}
-  \item{transform}{The transformation matrix from the whitening step.}
-  \item{backtransform}{The back-transformation matrix from the whitening step.}
-  \item{center}{The column center of the data}
+  \item{transform}{The transformation matrix from the whitening or standardization step.}
+  \item{backtransform}{The back-transformation matrix from the whitening or standardization step.}
+  \item{center}{The mean vector of the data}
 }
 
 \references{
-  \cite{Larabi Marie-Sainte, S. (2011). Biologically inspired algorithms for exploratory projection pursuit. PhD thesis, University of Toulouse.}
+    \cite{Larabi Marie-Sainte, S., (2011), Biologically inspired algorithms for exploratory projection pursuit, PhD thesis, University of Toulouse.}
 
-  \cite{Ruiz-Gazen, A., Larabi M.-S. and Berro, A. (2010). Detecting multivariate outliers using projection 
-   pursuit with particle swarm optimization. \emph{COMPSTAT2010}, pp. 89-98.}
+  \cite{Ruiz-Gazen, A., Larabi Marie-Sainte, S. and Berro, A. (2010), Detecting multivariate outliers using projection 
+   pursuit with particle swarm optimization, \emph{COMPSTAT2010}, pp. 89-98.}
+   
+ \cite{Berro, A., Larabi Marie-Sainte, S. and Ruiz-Gazen, A. (2010). Genetic algorithms and particle
+swarm optimization for exploratory projection pursuit. Annals of Mathematics and Artifcial Intelligence, 60, 153-178.}  
+ 
+ \cite{Larabi Marie-Sainte, S., Berro, A. and Ruiz-Gazen, A. (2010). An effcient optimization method
+for revealing local optima of projection pursuit indices. \emph{Swarm Intelligence}, pp. 60-71.}
 
   \cite{Clerc, M. (2006). Particle Swarm Optimization. ISTE, Wiley.}
 

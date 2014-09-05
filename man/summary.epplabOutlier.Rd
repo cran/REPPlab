@@ -18,7 +18,7 @@
 
 \details{
  The main information provided here is a table with names of the observations which are considered outliers
- and in how many PP directions they are considered outliers. For this function it is useful if the data has been
+ and in how many PP directions they are considered outliers. This function is useful if the data has been
  given row names. 
 }
 

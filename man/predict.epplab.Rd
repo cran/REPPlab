@@ -6,7 +6,7 @@
 
 \title{Calculates projections for a new Data Object}
 \description{
-  Calculates the projections of a new data object onto the directions from an existing ebblab object. 
+  Calculates the projections of a new data object onto the directions from an existing \code{ebblab} object. 
 }
 \usage{
  \method{predict}{epplab}(object,which=1, data=NULL,...)

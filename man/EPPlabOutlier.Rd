@@ -6,7 +6,7 @@ Function to Find Outliers for an epplab Object
 }
 \description{
 Function to decide wether observations are considered outliers or not in specific projection directions
-of an epplab object.
+of an \code{epplab} object.
 }
 \usage{
 EPPlabOutlier(x, which = 1:ncol(x$PPdir), k = 3, location = mean, scale = sd)
@@ -14,7 +14,7 @@ EPPlabOutlier(x, which = 1:ncol(x$PPdir), k = 3, location = mean, scale = sd)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
-An object of class epplab.
+An object of class \code{epplab}.
 }
   \item{which}{
 The directions in which outliers should be searched. The default is to look at all.
@@ -42,15 +42,15 @@ for example.
 \value{
 A list with class 'epplabOutlier' containing the following components:
 \item{outlier}{A matrix with only zeros and ones. A value of 1 classifies the observation as an outlier in this projection direction.}
-\item{k}{The number of \code{k} used.}
-\item{location}{The name of the \code{location} used.}
-\item{scale}{The name of the \code{scale} used.}
+\item{k}{The factor \code{k} used.}
+\item{location}{The name of the \code{location} estimator used.}
+\item{scale}{The name of the \code{scale} estimator used.}
 \item{PPindex}{The name of the \code{PPindex} used.}
 \item{PPalg}{The name of the \code{PPalg} used.}
 }
 \references{
-\cite{Ruiz-Gazen, A., Larabi M.-S. and Berro, A. (2010), Detecting multivariate outliers using projection 
-pursuit with particle swarm optimization, \emph{COMPSTAT2010}, pp. 89-98.}
+\cite{Ruiz-Gazen, A., Larabi Marie-Sainte, S. and Berro, A. (2010), Detecting multivariate outliers using projection 
+   pursuit with particle swarm optimization, \emph{COMPSTAT2010}, pp. 89-98.}
 }
 \author{
 Klaus Nordhausen

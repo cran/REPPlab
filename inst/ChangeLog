@@ -1,5 +1,50 @@
 LOG of the CHANGES in the package REPPlab
 
+Version 0.9
+-----------------------------------
+* Pre-release version
+* Reference to the Java sources added
+
+Version 0.4.4
+-----------------------------------
+* major revision of the manual
+
+Version 0.4.3
+-----------------------------------
+* made sure that all data standardization in epplab is done in R
+* adding description of convergence criteria in help file of epplab
+
+Version 0.4.2
+-----------------------------------
+* added data set ReliabilityData
+
+Version 0.4.1:
+-----------------------------------
+* REPPlab changes:
+* Fixed some display issues in the 'summary.epplab' and 'print.epplab' functions.
+* Corrected some typos in the manual.
+* PSO and Tribe maxiter default is now 200.
+* Fixed an error in 'summary.epplabOutlier' and 'plot.epplabOutlier' for the case that no outliers are observed.
+* Assign dummy rownames to data object in case no rownames are given.
+
+Version 0.4:
+-----------------------------------
+* EPPlab changes: 
+* Added a convergence criteria.
+
+* REPPlab changes:
+* Added the convergence criteria as options 'step_iter' and 'eps' in the EPPlab call. 
+* Added the convergence value to the 'print.epplab' and 'summary.epplab' output.
+
+Version 0.3:
+-----------------------------------
+* EPPlab changes: 
+* Added the library ssj.jar to the project
+
+* REPPlab changes:
+* The Friedman index is fully functional now.
+* Fixed a typo with the Tribe PP algorithm that caused the results to be the same for all different indices.
+
 Version 0.2:
 -----------------------------------
 * EPPlab changes: 

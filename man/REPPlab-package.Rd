@@ -3,7 +3,7 @@
 \docType{package}
 
 \title{
-  R Interface to the Java Programm EPP-lab v0.2.
+  R Interface to the Java Program EPP-lab v1.0.
 }
 
 \description{
@@ -19,8 +19,8 @@
   \tabular{ll}{
     Package: \tab REPPlab\cr
     Type: \tab Package\cr
-    Version: \tab 0.2\cr
-    Date: \tab 2013-10-22\cr
+    Version: \tab 0.9\cr
+    Date: \tab 2014-09-05\cr
     License: \tab GPL\cr
     LazyLoad: \tab yes\cr
   }
@@ -35,8 +35,14 @@
 \references{
   \cite{Larabi Marie-Sainte, S., (2011), Biologically inspired algorithms for exploratory projection pursuit, PhD thesis, University of Toulouse.}
 
-  \cite{Ruiz-Gazen, A., Larabi M.-S. and Berro, A. (2010), Detecting multivariate outliers using projection 
+  \cite{Ruiz-Gazen, A., Larabi Marie-Sainte, S. and Berro, A. (2010), Detecting multivariate outliers using projection 
    pursuit with particle swarm optimization, \emph{COMPSTAT2010}, pp. 89-98.}
+   
+ \cite{Berro, A., Larabi Marie-Sainte, S. and Ruiz-Gazen, A. (2010). Genetic algorithms and particle
+swarm optimization for exploratory projection pursuit. Annals of Mathematics and Artifcial Intelligence, 60, 153-178.}  
+ 
+ \cite{Larabi Marie-Sainte, S., Berro, A. and Ruiz-Gazen, A. (2010). An effcient optimization method
+for revealing local optima of projection pursuit indices. \emph{Swarm Intelligence}, pp. 60-71.}
 }
 
 \keyword{multivariate}

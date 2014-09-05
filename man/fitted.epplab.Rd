@@ -6,7 +6,7 @@
 
 \title{Calculates projections of the Data}
 \description{
-  Calculates the projections of the data object onto the directions from an underlying ebblab object. 
+  Calculates the projections of the data object onto the directions from an underlying \code{ebblab} object. 
 }
 \usage{
  \method{fitted}{epplab}(object,which=1,...)

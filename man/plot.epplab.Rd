@@ -6,7 +6,7 @@
 
 \title{Plot for an epplab Object}
 \description{
- The function offers three informative plots for an epplab object.
+ The function offers three informative plots for an \code{epplab} object.
 }
 \usage{
  \method{plot}{epplab}(x,type="kernel", angles="radiants",kernel="biweight",which=1:10,

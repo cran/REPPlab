@@ -14,7 +14,7 @@
 
 \arguments{
   \item{object}{Object of class \code{epplab}.}
-  \item{which}{Summary for which simulation runs}
+  \item{which}{Summary for \code{which} simulation runs}
   \item{...}{Additional parameters}
 }
 
