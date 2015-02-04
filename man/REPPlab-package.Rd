@@ -3,11 +3,11 @@
 \docType{package}
 
 \title{
-  R Interface to the Java Program EPP-lab v1.0.
+  R Interface to the Java Program EPP-lab v1.0
 }
 
 \description{
-  REPPlab is an R interface that gives access to the Java program EPP-lab which implements
+  An interface that gives access to the Java program EPP-lab which implements
   several biologically inspired optimisation algorithms and several indices for
   Exploratory Projection Pursuit (PP). The objective of optimizing PP indices
   and projecting the data on the associated one-dimensional directions is to
@@ -19,8 +19,8 @@
   \tabular{ll}{
     Package: \tab REPPlab\cr
     Type: \tab Package\cr
-    Version: \tab 0.9\cr
-    Date: \tab 2014-09-05\cr
+    Version: \tab 0.9.1\cr
+    Date: \tab 2015-02-04\cr
     License: \tab GPL\cr
     LazyLoad: \tab yes\cr
   }
@@ -29,7 +29,7 @@
 \author{
   Daniel Fischer, Alain Berro, Klaus Nordhausen, Anne Ruiz-Gazen
 
-  Maintainer: Daniel Fischer <daniel.fischer@uta.fi>
+  Maintainer: Daniel Fischer <daniel.fischer@luke.fi>
 }
 
 \references{

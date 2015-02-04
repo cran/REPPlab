@@ -1,4 +1,4 @@
-cc63e82dc3821b0a6553f16552a77e42 *DESCRIPTION
+c792803209b0a85e07b62c5f40c87d5f *DESCRIPTION
 a23701eff467ce36c21fadaa6853ed1c *NAMESPACE
 18ca49434d2e2199594692c0836b4892 *R/REPPlab.R
 d83f54585d531a2b44d07cc0ffaf1b76 *R/anglesXYPlot.R
@@ -16,13 +16,13 @@ b8d11fff28d1c0f30e7fe25ccdfd9e5f *R/summary.epplab.R
 e5d74a5e3591382aac14878054dd2b7d *R/summary.epplabOutlier.R
 fad9dbe1f705d070d0da68c182b8f7f9 *R/whitenSVD.R
 9ca4715a77dd342a9f3ea61e5d7b67ac *data/ReliabilityData.rda
-d82d52a9f3f0c394370ec7751b8e9741 *inst/ChangeLog
+1266a33467361efaab1ca1dcd9e2d6fd *inst/ChangeLog
 58f742ff24fea7844c23f01cca001f26 *inst/java/EPPlab.jar
 207ab4c9016631dcf55160e7c852a37b *inst/java/ssj.jar
 0bf7a3c6f1a7a98888d0af170aca7580 *java/EPPlab.sources.txt
 41d7a06e7e3075e8bb2fcfc44ea3bdc4 *man/EPPlab.Rd
 a16934b1ac49086a385f53146a28204b *man/EPPlabOutlier.Rd
-24996620756fdca4167ab7abb558f047 *man/REPPlab-package.Rd
+6f4e6f6fb3c4a83d8c78d8a4891814ef *man/REPPlab-package.Rd
 6c71ded78c95ee1f731b02b06bcbc29a *man/ReliabilityData.Rd
 b9985f039f9188beb0c92c611c9a0f7b *man/WhitenSVD.Rd
 218d95ae455a4f09a9771d4a6bac9f9f *man/coef.epplab.Rd
