@@ -1,5 +1,12 @@
 LOG of the CHANGES in the package REPPlab
 
+Version 0.9.2
+-----------------------------------
+* Introduced Roxygen2 for the package documentation
+* New function EPPlabAgg
+* summary.epplabOutlier is now more detailed
+* plot.epplabOutlier got more options to control the appearance of the figure
+
 Versiom 0.9.1
 -----------------------------------
 * New maintainer email address
