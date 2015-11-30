@@ -62,7 +62,7 @@
 #'  rug(oliveProj[olive$region==3],col=3)
 #' 
 #' @export EPPlabAgg
-EPPlabAgg <- function(x, method="cumulative", percentage=0.95){
+EPPlabAgg <- function(x, method="cumulative", percentage=0.85){
   
       # Input checks
         method <- match.arg(method, c("inverse", "sq.inverse", "cumulative"))

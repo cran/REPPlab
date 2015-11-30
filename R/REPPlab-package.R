@@ -1,8 +1,8 @@
-#' Reliability Data from a Manufacturer of Electronic Components
+#' Reliability Data from an Industrial Context
 #' 
-#' The data set contains 55 variables measured during the production process of
-#' 520 components. The problem for this data is to identify the produced items
-#' with a fault.
+#' The data set contains 55 variables measured during the production
+#' process of 520 units. The problem for this data is to identify the
+#' produced items with a fault not detected by standard tests.
 #' 
 #' 
 #' @name ReliabilityData
@@ -18,17 +18,20 @@
 NULL
 
 
-#' R Interface to the Java Program EPP-lab v1.0
+#' R Interface to the Java Program 'EPP-lab' v1.0
 #' 
-#' An interface that gives access to the Java program EPP-lab which implements
+#' An interface that gives access to the Java program 'EPP-lab' which implements
 #' several biologically inspired optimisation algorithms and several indices
 #' for Exploratory Projection Pursuit (PP). The objective of optimizing PP
 #' indices and projecting the data on the associated one-dimensional directions
 #' is to detect hidden structures such as clusters or outliers in (possibly
 #' high dimensional) data sets.
+#' The 'EPP-lab' sources and jar-files are available under 
+#' \url{https://github.com/fischuu/EPP-lab.git}. For a detailed description of
+#'  'EPP-lab', see Larabi (2011).
 #' 
 #' \tabular{ll}{ Package: \tab REPPlab\cr Type: \tab Package\cr Version: \tab
-#' 0.9.2\cr Date: \tab 2015-09-01\cr License: \tab GPL\cr LazyLoad: \tab yes\cr
+#' 0.9.3\cr Date: \tab 2015-11-30\cr License: \tab GPL\cr LazyLoad: \tab yes\cr
 #' }
 #' 
 #' @name REPPlab-package
@@ -36,7 +39,7 @@ NULL
 #' @docType package
 #' @author Daniel Fischer, Alain Berro, Klaus Nordhausen, Anne Ruiz-Gazen
 #' 
-#' Maintainer: Daniel Fischer <daniel.fischer@@luke.fi>
+#' Maintainer: Daniel Fischer <daniel.fischer@luke.fi>
 #'
 #' @import rJava lattice stats LDRTools graphics
 #* @importFrom utils stack

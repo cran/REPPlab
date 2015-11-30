@@ -1,5 +1,12 @@
 LOG of the CHANGES in the package REPPlab
 
+Version 0.9.3
+-----------------------------------
+* Default setting for 'percentage' in EPPlabAgg changed from 0.95 to 0.8
+* Help pages/Manual updated
+* Typos in manual fixed
+* Version number of the dependencies corrected
+
 Version 0.9.2
 -----------------------------------
 * Introduced Roxygen2 for the package documentation
