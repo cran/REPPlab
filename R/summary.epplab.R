@@ -10,6 +10,7 @@
 #' @docType methods
 #' @param object Object of class \code{epplab}.
 #' @param which Summary for \code{which} simulation runs
+#' @param digits Number of displayed decimal digits
 #' @param ... Additional parameters
 #' @author Daniel Fischer
 #' @keywords methods print
@@ -21,12 +22,12 @@
 #' summary(res)
 #' 
 #' @export
-summary.epplab <- function(object, which=1:10, ...){
+summary.epplab <- function(object, which=1:10, digits=4, ...){
   which <- which[which<=length(object$PPindexVal)]
   cat("REPPlab Summary\n")
   cat("---------------\n")
   cat("Index name       :",object$PPindex,"\n")
-  cat("Index values     :",object$PPindexVal[which],"\n")
+  cat("Index values     :",round(object$PPindexVal[which],digits=digits),"\n")
   cat("Algorithm used   :",object$PPalg,"\n")
   cat("Sphered          :",object$sphered,"\n")
   cat("Iterations       :",object$PPiter[which],"\n")

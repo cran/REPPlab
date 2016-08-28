@@ -7,12 +7,14 @@
 \alias{summary.epplab}
 \title{Summarize an epplab Object}
 \usage{
-\method{summary}{epplab}(object, which = 1:10, ...)
+\method{summary}{epplab}(object, which = 1:10, digits = 4, ...)
 }
 \arguments{
 \item{object}{Object of class \code{epplab}.}
 
 \item{which}{Summary for \code{which} simulation runs}
+
+\item{digits}{Number of displayed decimal digits}
 
 \item{...}{Additional parameters}
 }

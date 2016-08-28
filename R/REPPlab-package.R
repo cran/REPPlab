@@ -31,7 +31,7 @@ NULL
 #'  'EPP-lab', see Larabi (2011).
 #' 
 #' \tabular{ll}{ Package: \tab REPPlab\cr Type: \tab Package\cr Version: \tab
-#' 0.9.3\cr Date: \tab 2015-11-30\cr License: \tab GPL\cr LazyLoad: \tab yes\cr
+#' 0.9.4\cr Date: \tab 2016-08-23\cr License: \tab GPL\cr LazyLoad: \tab yes\cr
 #' }
 #' 
 #' @name REPPlab-package
