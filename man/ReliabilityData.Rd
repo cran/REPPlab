@@ -4,7 +4,9 @@
 \name{ReliabilityData}
 \alias{ReliabilityData}
 \title{Reliability Data from an Industrial Context}
-\format{A data frame with 520 observations on 55 variables.}
+\format{
+A data frame with 520 observations on 55 variables.
+}
 \source{
 The data was anonymized to keep confidentiality.
 }
@@ -20,4 +22,3 @@ summary(ReliabilityData)
 
 }
 \keyword{datasets}
-

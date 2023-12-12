@@ -69,14 +69,13 @@ The method \code{cumulative} is based on the eigenvalue decomposition of
  rug(oliveProj[olive$region==3],col=3)
 
 }
-\author{
-Daniel Fischer, Klaus Nordhausen, Anne Ruiz-Gazen
-}
 \references{
 \cite{Liski, E., Nordhausen, K., Oja, H. and Ruiz-Gazen, A. (201?), Combining Linear Dimension Reduction Estimates, to appear in the Proceedings of \emph{ICORS 2015}, pp. ??-??.}
 }
 \seealso{
 \code{\link{EPPlab}}, \code{\link[LDRTools]{AOP}}
 }
+\author{
+Daniel Fischer, Klaus Nordhausen, Anne Ruiz-Gazen
+}
 \keyword{multivariate}
-

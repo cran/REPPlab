@@ -66,7 +66,7 @@ EPPlabAgg <- function(x, method="cumulative", percentage=0.85){
   
       # Input checks
         method <- match.arg(method, c("inverse", "sq.inverse", "cumulative"))
-        if(class(x)=="epplab") x <- list(x)  
+        if(inherits(x, "epplab")) x <- list(x)  
       
       # Now combine the results
         switch(method,

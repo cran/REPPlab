@@ -2,8 +2,8 @@
 % Please edit documentation in R/summary.epplabOutlier.R
 \docType{methods}
 \name{summary.epplabOutlier}
-\alias{summary,epplabOutlier-method}
 \alias{summary.epplabOutlier}
+\alias{summary,epplabOutlier-method}
 \title{Summarize an epplabOutlier Object}
 \usage{
 \method{summary}{epplabOutlier}(object, ...)
@@ -44,4 +44,3 @@ Klaus Nordhausen
 }
 \keyword{methods}
 \keyword{print}
-

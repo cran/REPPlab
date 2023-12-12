@@ -2,9 +2,9 @@
 % Please edit documentation in R/summary.epplab.R
 \docType{methods}
 \name{summary.epplab}
-\alias{summary,epplab-method}
-\alias{summary-method}
 \alias{summary.epplab}
+\alias{summary-method}
+\alias{summary,epplab-method}
 \title{Summarize an epplab Object}
 \usage{
 \method{summary}{epplab}(object, which = 1:10, digits = 4, ...)
@@ -38,4 +38,3 @@ Daniel Fischer
 }
 \keyword{methods}
 \keyword{print}
-

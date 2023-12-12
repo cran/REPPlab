@@ -2,9 +2,9 @@
 % Please edit documentation in R/pairs.epplab.R
 \docType{methods}
 \name{pairs.epplab}
-\alias{pairs,epplab-method}
-\alias{pairs-method}
 \alias{pairs.epplab}
+\alias{pairs-method}
+\alias{pairs,epplab-method}
 \title{Plots a Scatterplot Matrix for an epplab Object}
 \usage{
 \method{pairs}{epplab}(x, which = 1:10, ...)
@@ -36,4 +36,3 @@ Daniel Fischer
 }
 \keyword{hplot}
 \keyword{methods}
-

@@ -2,12 +2,11 @@
 % Please edit documentation in R/plot.epplabOutlier.R
 \docType{methods}
 \name{plot.epplabOutlier}
-\alias{plot,epplabOutlier-method}
 \alias{plot.epplabOutlier}
+\alias{plot,epplabOutlier-method}
 \title{Plot for an epplabOutlier Object}
 \usage{
-\method{plot}{epplabOutlier}(x, col = c("white", "black"), outlier = TRUE,
-  xlab = "", ylab = "", ...)
+\method{plot}{epplabOutlier}(x, col = c("white", "black"), outlier = TRUE, xlab = "", ylab = "", ...)
 }
 \arguments{
 \item{x}{Object of class \code{epplabOutlier}.}
@@ -47,12 +46,11 @@ OUT<-EPPlabOutlier(PP, k = 3, location = median, scale = mad)
 plot(OUT)
 
 }
-\author{
-Daniel Fischer and Klaus Nordhausen
-}
 \seealso{
 \code{\link{EPPlabOutlier}}, \code{\link{image}}
 }
+\author{
+Daniel Fischer and Klaus Nordhausen
+}
 \keyword{hplot}
 \keyword{methods}
-

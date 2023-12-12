@@ -2,13 +2,20 @@
 % Please edit documentation in R/plot.epplab.R
 \docType{methods}
 \name{plot.epplab}
-\alias{plot,epplab-method}
-\alias{plot-method}
 \alias{plot.epplab}
+\alias{plot-method}
+\alias{plot,epplab-method}
 \title{Plot for an epplab Object}
 \usage{
-\method{plot}{epplab}(x, type = "kernel", angles = "radiants",
-  kernel = "biweight", which = 1:10, as.table = TRUE, ...)
+\method{plot}{epplab}(
+  x,
+  type = "kernel",
+  angles = "radiants",
+  kernel = "biweight",
+  which = 1:10,
+  as.table = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{Object of class \code{epplab}.}
@@ -59,13 +66,12 @@ plot(res,type="histogram")
 plot(res,type="angles")
 
 }
-\author{
-Daniel Fischer, Klaus Nordhausen
-}
 \seealso{
 \code{\link[lattice]{xyplot}}, \code{\link[lattice]{densityplot}},
 \code{\link[lattice]{histogram}}, \code{\link{density}}
 }
+\author{
+Daniel Fischer, Klaus Nordhausen
+}
 \keyword{hplot}
 \keyword{methods}
-

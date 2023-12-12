@@ -4,8 +4,7 @@
 \alias{EPPlabOutlier}
 \title{Function to Find Outliers for an epplab Object}
 \usage{
-EPPlabOutlier(x, which = 1:ncol(x$PPdir), k = 3, location = mean,
-  scale = sd)
+EPPlabOutlier(x, which = 1:ncol(x$PPdir), k = 3, location = mean, scale = sd)
 }
 \arguments{
 \item{x}{An object of class \code{epplab}.}
@@ -61,9 +60,6 @@ OUT<-EPPlabOutlier(PP, k = 3, location = median, scale = mad)
 OUT
 
 }
-\author{
-Klaus Nordhausen
-}
 \references{
 \cite{Ruiz-Gazen, A., Larabi Marie-Sainte, S. and Berro, A.
 (2010), Detecting multivariate outliers using projection pursuit with
@@ -72,5 +68,7 @@ particle swarm optimization, \emph{COMPSTAT2010}, pp. 89-98.}
 \seealso{
 \code{\link{EPPlab}}
 }
+\author{
+Klaus Nordhausen
+}
 \keyword{multivariate}
-

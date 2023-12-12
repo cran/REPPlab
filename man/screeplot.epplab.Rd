@@ -2,13 +2,20 @@
 % Please edit documentation in R/screeplot.epplab.R
 \docType{methods}
 \name{screeplot.epplab}
-\alias{screeplot,epplab-method}
-\alias{screeplot-method}
 \alias{screeplot.epplab}
+\alias{screeplot-method}
+\alias{screeplot,epplab-method}
 \title{Creating a Screeplot for an epplab Object}
 \usage{
-\method{screeplot}{epplab}(x, type = "lines", which = 1:10, main = "",
-  ylab = "Objective criterion", xlab = "Simulation run", ...)
+\method{screeplot}{epplab}(
+  x,
+  type = "lines",
+  which = 1:10,
+  main = "",
+  ylab = "Objective criterion",
+  xlab = "Simulation run",
+  ...
+)
 }
 \arguments{
 \item{x}{Object of class \code{epplab}.}
@@ -52,4 +59,3 @@ screeplot(res,which=1:5)
 Daniel Fischer
 }
 \keyword{hplot}
-

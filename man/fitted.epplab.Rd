@@ -2,9 +2,9 @@
 % Please edit documentation in R/fitted.epplab.R
 \docType{methods}
 \name{fitted.epplab}
-\alias{fitted,epplab-method}
-\alias{fitted-method}
 \alias{fitted.epplab}
+\alias{fitted-method}
+\alias{fitted,epplab-method}
 \title{Calculates projections of the Data}
 \usage{
 \method{fitted}{epplab}(object, which = 1, ...)
@@ -46,4 +46,3 @@ Daniel Fischer
 }
 \keyword{methods}
 \keyword{print}
-

@@ -2,7 +2,6 @@
 % Please edit documentation in R/REPPlab-package.R
 \docType{package}
 \name{REPPlab-package}
-\alias{R/EPP-lab-package}
 \alias{REPPlab-package}
 \title{R Interface to the Java Program 'EPP-lab' v1.0}
 \description{
@@ -13,18 +12,13 @@ indices and projecting the data on the associated one-dimensional directions
 is to detect hidden structures such as clusters or outliers in (possibly
 high dimensional) data sets.
 The 'EPP-lab' sources and jar-files are available under 
-\url{https://github.com/fischuu/EPP-lab.git}. For a detailed description of
+\url{https://github.com/fischuu/EPP-lab}. For a detailed description of
  'EPP-lab', see Larabi (2011).
 }
 \details{
 \tabular{ll}{ Package: \tab REPPlab\cr Type: \tab Package\cr Version: \tab
-0.9.4\cr Date: \tab 2016-08-23\cr License: \tab GPL\cr LazyLoad: \tab yes\cr
+0.9.6\cr Date: \tab 2023-12-11\cr License: \tab GPL\cr LazyLoad: \tab yes\cr
 }
-}
-\author{
-Daniel Fischer, Alain Berro, Klaus Nordhausen, Anne Ruiz-Gazen
-
-Maintainer: Daniel Fischer <daniel.fischer@luke.fi>
 }
 \references{
 \cite{Larabi Marie-Sainte, S., (2011), Biologically inspired
@@ -43,5 +37,9 @@ pursuit. Annals of Mathematics and Artifcial Intelligence, 60, 153-178.}
 effcient optimization method for revealing local optima of projection
 pursuit indices. \emph{Swarm Intelligence}, pp. 60-71.}
 }
-\keyword{multivariate}
+\author{
+Daniel Fischer, Alain Berro, Klaus Nordhausen, Anne Ruiz-Gazen
 
+Maintainer: Daniel Fischer <daniel.fischer@luke.fi>
+}
+\keyword{multivariate}

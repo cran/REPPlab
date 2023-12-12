@@ -27,15 +27,14 @@ NULL
 #' is to detect hidden structures such as clusters or outliers in (possibly
 #' high dimensional) data sets.
 #' The 'EPP-lab' sources and jar-files are available under 
-#' \url{https://github.com/fischuu/EPP-lab.git}. For a detailed description of
+#' \url{https://github.com/fischuu/EPP-lab}. For a detailed description of
 #'  'EPP-lab', see Larabi (2011).
 #' 
 #' \tabular{ll}{ Package: \tab REPPlab\cr Type: \tab Package\cr Version: \tab
-#' 0.9.4\cr Date: \tab 2016-08-23\cr License: \tab GPL\cr LazyLoad: \tab yes\cr
+#' 0.9.6\cr Date: \tab 2023-12-11\cr License: \tab GPL\cr LazyLoad: \tab yes\cr
 #' }
 #' 
 #' @name REPPlab-package
-#' @aliases R/EPP-lab-package
 #' @docType package
 #' @author Daniel Fischer, Alain Berro, Klaus Nordhausen, Anne Ruiz-Gazen
 #' 

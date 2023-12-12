@@ -2,8 +2,8 @@
 % Please edit documentation in R/print.epplabOutlier.R
 \docType{methods}
 \name{print.epplabOutlier}
-\alias{print,epplabOutlier-method}
 \alias{print.epplabOutlier}
+\alias{print,epplabOutlier-method}
 \title{Print an epplabOutlier Object}
 \usage{
 \method{print}{epplabOutlier}(x, ...)
@@ -42,4 +42,3 @@ Klaus Nordhausen
 }
 \keyword{methods}
 \keyword{print}
-

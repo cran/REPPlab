@@ -2,9 +2,9 @@
 % Please edit documentation in R/print.epplab.R
 \docType{methods}
 \name{print.epplab}
-\alias{print,epplab-method}
-\alias{print-method}
 \alias{print.epplab}
+\alias{print-method}
+\alias{print,epplab-method}
 \title{Print an epplab Object}
 \usage{
 \method{print}{epplab}(x, ...)
@@ -34,4 +34,3 @@ Daniel Fischer
 }
 \keyword{methods}
 \keyword{print}
-

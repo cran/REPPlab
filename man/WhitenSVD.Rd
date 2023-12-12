@@ -50,11 +50,10 @@ summary(sweep(B \%*\% (attr(B,"backtransform")), 2, attr(B,"center"), "+") - Y)
 
 
 }
-\author{
-Klaus Nordhausen
-}
 \seealso{
 \code{\link{svd}}, \code{\link{cov}}, \code{\link{colMeans}}
 }
+\author{
+Klaus Nordhausen
+}
 \keyword{multivariate}
-

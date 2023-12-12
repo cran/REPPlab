@@ -1,5 +1,10 @@
 LOG of the CHANGES in the package REPPlab
 
+Version 0.9.6
+-----------------------------------
+* Fixed the encoding information in the DESCRIPTION file from latin1 to UTF-8
+* Adjusted the Aliases used for the pacakges
+
 Version 0.9.4
 -----------------------------------
 * Added 'digits' option to 'summary.epplab'

@@ -2,9 +2,9 @@
 % Please edit documentation in R/predict.epplab.R
 \docType{methods}
 \name{predict.epplab}
-\alias{predict,epplab-method}
-\alias{predict-method}
 \alias{predict.epplab}
+\alias{predict-method}
+\alias{predict,epplab-method}
 \title{Calculates projections for a new Data Object}
 \usage{
 \method{predict}{epplab}(object, which = 1, data = NULL, ...)
@@ -55,4 +55,3 @@ Daniel Fischer
 }
 \keyword{methods}
 \keyword{print}
-

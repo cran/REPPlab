@@ -2,9 +2,9 @@
 % Please edit documentation in R/coef.epplab.R
 \docType{methods}
 \name{coef.epplab}
-\alias{coef,epplab-method}
-\alias{coef-method}
 \alias{coef.epplab}
+\alias{coef-method}
+\alias{coef,epplab-method}
 \title{Extracts the Directions of an Epplab Object}
 \usage{
 \method{coef}{epplab}(object, which = 1:ncol(object$PPdir), ...)
@@ -35,4 +35,3 @@ Daniel Fischer
 }
 \keyword{methods}
 \keyword{print}
-

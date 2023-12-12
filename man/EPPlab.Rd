@@ -4,9 +4,18 @@
 \alias{EPPlab}
 \title{Function for Exploratory Projection Pursuit.}
 \usage{
-EPPlab(x, PPindex = "KurtosisMax", PPalg = "GA", n.simu = 20,
-  sphere = FALSE, maxiter = NULL, individuals = NULL, particles = NULL,
-  step_iter = 10, eps = 10^(-6))
+EPPlab(
+  x,
+  PPindex = "KurtosisMax",
+  PPalg = "GA",
+  n.simu = 20,
+  sphere = FALSE,
+  maxiter = NULL,
+  individuals = NULL,
+  particles = NULL,
+  step_iter = 10,
+  eps = 10^(-6)
+)
 }
 \arguments{
 \item{x}{Matrix where each row is an observation and each column a
@@ -125,9 +134,6 @@ structure.
   predict(res,data=lubisch[71:74,2:7])
 
 }
-\author{
-Daniel Fischer, Klaus Nordhausen
-}
 \references{
 \cite{Larabi Marie-Sainte, S., (2011), Biologically inspired
 algorithms for exploratory projection pursuit, PhD thesis, University of
@@ -151,4 +157,6 @@ pursuit indices. \emph{Swarm Intelligence}, pp. 60-71.}
 TRIBES, an adaptive particle swarm optimization algorithm. Swarm
 Intelligence, 3(2), 149-178.}
 }
-
+\author{
+Daniel Fischer, Klaus Nordhausen
+}
